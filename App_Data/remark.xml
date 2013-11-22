@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<podcast>
+  <podcastFolder>D:\AudioBooks\audiobook_n\Remark_Zhizn_vzaimy</podcastFolder>
+  <fileMask>*.mp3</fileMask>
+  <SortMethod>Date</SortMethod>
+  <recursively>true</recursively>
+</podcast>
