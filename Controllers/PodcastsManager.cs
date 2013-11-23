@@ -79,9 +79,19 @@ namespace Podcasts.Controllers
             return channel;
         }
 
-        private void SortItems(IList<PodcastItem> items, SortMethod sortMethod, SortOrder order)
+        private void SortItems(List<PodcastItem> items, SortMethod sortMethod, SortOrder order)
         {
-            
+            switch (sortMethod)
+            {
+                case SortMethod.Title:
+                    items.Sort((a, b) => a.Title.CompareTo(b.Title));
+                    break;
+                case SortMethod.Date:
+                    items.Sort((a, b) => a.PubDate.CompareTo(b.PubDate));
+                    break;
+                default:
+                    return;
+            }
         }
 
         private PodcastItem GetChannelItem(string mp3File)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <podcast>
-  <podcastFolder>D:\AudioBooks\audiobook_n\Remark_Zhizn_vzaimy</podcastFolder>
+  <podcastFolder>D:\AudioBooks\audiobook_n\Hugo_Victor_Chelovek</podcastFolder>
   <fileMask>*.mp3</fileMask>
-  <SortMethod>Date</SortMethod>
+  <SortMethod>Title</SortMethod>
   <recursively>true</recursively>
 </podcast>

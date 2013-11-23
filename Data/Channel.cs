@@ -16,6 +16,6 @@ namespace Podcasts.Data
 
         public string Author { get; set; }
 
-        public IList<PodcastItem>Items { get; protected set; }
+        public List<PodcastItem>Items { get; protected set; }
     }
 }
