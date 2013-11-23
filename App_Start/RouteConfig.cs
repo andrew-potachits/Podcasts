@@ -10,16 +10,18 @@ namespace Podcasts
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "GetFile",
+                url: "{controller}/{action}/{name}/{file}",
+                defaults: new { controller = "Podcast", action = "GetFile" }
+            );
+            
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{name}",
                 defaults: new { controller = "Podcast", action = "ListEpisodes" }
             );
 
-            routes.MapRoute(
-                name: "GetFile",
-                url: "{controller}/{action}/{name}/{file}",
-                defaults: new { controller = "Podcast", action = "GetFile" }
-            );
+
 
 
             PreApplicationStartCode.Start();

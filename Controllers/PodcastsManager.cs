@@ -104,6 +104,7 @@ namespace Podcasts.Controllers
                 item.PubDate = File.GetCreationTime(mp3File);
                 item.Path = mp3File;
                 item.MimeType = GetMimeType(mp3File);
+                item.Size = (new FileInfo(mp3File)).Length;
                 return item;
             }
         }

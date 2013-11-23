@@ -17,5 +17,7 @@ namespace Podcasts.Data
         public string Path { get; set; }
 
         public string MimeType { get; set; }
+
+        public long Size { get; set; }
     }
 }

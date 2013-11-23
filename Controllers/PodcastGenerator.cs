@@ -1,3 +1,4 @@
+using System;
 using System.Xml;
 using Podcasts.Data;
 
@@ -48,9 +49,10 @@ namespace Podcasts.Controllers
             {
                 writer.WriteAttributeString("url", item.Path);
                 writer.WriteAttributeString("type", item.MimeType);
+                writer.WriteAttributeString("length", item.Size.ToString("D"));
             }
             writer.WriteEndElement();
-            writer.WriteElementString("guid", item.Path);
+            writer.WriteElementString("guid", Guid.NewGuid().ToString());
             writer.WriteElementString(iTunes, "duration", null, string.Format("{0}:{1:D2}", (int)item.Duration.TotalMinutes, item.Duration.Seconds));
             writer.WriteElementString("pubDate", item.PubDate.ToString("MM/dd/yyyy HH:mm:ss"));
         }
